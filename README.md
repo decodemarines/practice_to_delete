@@ -6,4 +6,4 @@
    Knuth–Morris–Pratt (KMP) Pattern Matching Substring Search - First Occurrence Of Substring
    https://www.youtube.com/watch?v=BXCEFAzhxGY
 
-3. Rotate Image simple solution C++: YT 3.5 задачи в неделю
+3. Rotate Image simple solution C++: YT 3.5 задачи в неделю :reverse + transpose
