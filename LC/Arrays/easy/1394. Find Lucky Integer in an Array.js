@@ -48,3 +48,26 @@ var findLucky = function (arr) {
     }
     return max
 }
+
+
+/*STATS Runtime: 56 ms, faster than 86.46% of JavaScript online submissions for Find Lucky Integer in an Array.
+Memory Usage: 35.4 MB, less than 100.00% of JavaScript online submissions for Find Lucky Integer in an Array.*/
+
+var findLucky = function(arr) {
+    let map = {};
+    for (let num of arr) {
+        if (!map[num]) {
+            map[num] = 1;
+        } else {
+            map[num]++;
+        }
+    }
+    let max = -1;
+    for (let num of arr) {
+        if (map[num] === num) {
+            if (num > max) {
+                max = num
+            }
+        }
+    } return max;
+};
