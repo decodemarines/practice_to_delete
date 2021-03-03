@@ -6,6 +6,8 @@
 
    https://tech.liuchao.me/2016/11/count-bits-of-integer/
 
+   https://leetcode.com/discuss/general-discussion/1073221/all-about-bitwise-operations-beginner-intermediate/863477
+
 2. KMP substring search:YT.Back To Back SWE:
    Knuth–Morris–Pratt (KMP) Pattern Matching Substring Search - First Occurrence Of Substring
    https://www.youtube.com/watch?v=BXCEFAzhxGY
@@ -27,4 +29,11 @@
 7. YT. Back To Back SWE: Search A 2D Sorted Matrix - Fundamentals of Search Space Reduction
    https://www.youtube.com/watch?v=FOa55B9Ikfg
 
-8. 1051. Height Checker
+8. Disjoint set Union
+   https://leetcode.com/discuss/general-discussion/1072418/disjoint-set-union-dsuunion-find-a-complete-guide
+   List of problems: https://leetcode.com/list/5lhmb4mj/
+
+9. сумма двух в массиве 4 способа https://habr.com/ru/company/skillbox/blog/443886/
+   HappyLynx
+   10 апреля 2019 в 17:25 0
+   Потому что Array.indexOf работает за O(n), в итоге весь ваш алгоритм работает за O(n^2), вы просто переложили половину работы по перебору влоб на плечи реализации метода indexOf.

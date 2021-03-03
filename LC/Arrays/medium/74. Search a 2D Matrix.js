@@ -64,3 +64,91 @@ console.log(searchMatrix(matrix, target))
 //     }
 //     return false;
 // }
+
+
+// Faster
+var searchMatrix = function(matrix, target) {
+    
+    //     for (let i = 0; i < matrix.length; i++) {
+    //         for (let j = 0; j < matrix[i].length; j++) {
+    //             if (matrix[i][j] == target) return true
+    //         }
+    //     }
+        
+    //     return false
+        
+        if (matrix.length == 1) {
+            for (let i = 0; i < matrix[0].length; i++) {
+                if (target == matrix[0][i]) return true
+            }
+            return false
+        }
+        
+        let arrayToSearch = []
+        
+        for (let i = 1; i < matrix.length; i++) {
+            
+            if (target < matrix[i][0]) {
+                //look in row (array) above the i-th row
+                //console.log("ITS IN THIS ONE", matrix[i-1])
+                arrayToSearch = matrix[i-1]
+                break
+            } else if (target >= matrix[i][0] && target <= matrix[i][matrix[i].length - 1]) {
+                //its in the ith row
+                //console.log("it should be here", matrix[i])
+                arrayToSearch = matrix[i]
+                break
+            } 
+        }
+        
+        for (let i = 0; i < arrayToSearch.length; i++) {
+            if (target == arrayToSearch[i]) return true
+        }
+        
+        return false
+
+};
+    
+var searchMatrix = function(matrix, target) {
+    if(matrix.length===0 || matrix===null) return false;
+    let i =0;
+    let n = matrix[0].length-1
+    let j= n;
+    
+    while(i< matrix.length && j>=0){
+        if(matrix[i][j]===target){
+            return true;
+        } else if(target < matrix[i][j]){
+            j--;
+        } else{
+            i++;
+        }
+    }
+    return false;
+};
+
+var searchMatrix = function(matrix, target) { 
+    let m = matrix.length 
+    let n = matrix[0].length
+    if(m == 0) return false
+    let l = 0
+    let r = m * n-1
+    
+    while(l+1 < r){
+        let mid = parseInt((l+r)/2)
+        let midElement = matrix[Math.floor(mid/n)][mid%n]
+        if(target == midElement){
+            return true
+        }
+        if(target > midElement){
+            l = mid
+           }
+        if(target < midElement){
+                r = mid
+          }
+    }
+    if(matrix[Math.floor(l/n)][l%n] == target) return target
+    if(matrix[Math.floor(r/n)][r%n] == target) return target
+    return false
+    
+};

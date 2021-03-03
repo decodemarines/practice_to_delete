@@ -71,3 +71,78 @@ var findLucky = function(arr) {
         }
     } return max;
 };
+var findLucky=function(arr){
+    let m=new Map()
+    for(let n of arr){
+        if(m.has(n)){
+            m.set(n,m.get(n)+1)
+        }else{
+            m.set(n,1)
+        }
+    }
+    let max=-1
+    for(let [n,count] of m){
+        if(n===count && n>max){
+            max=n
+           
+        }
+       
+    }
+    return max
+}
+// faster
+var findLucky = function(arr) {
+    const obj = {};
+    for(let i = 0; i < arr.length; i++){
+        obj[arr[i]] = (obj[arr[i]] || 0) + 1;
+    }
+    large = 0;
+    for(const key in obj){
+        if(obj[key] == key){
+            if(obj[key] >= large) {
+                large = key;
+            }
+        }
+    }
+    return large > 0 ? large: -1;
+};
+
+var findLucky = function(arr) {
+    let map = new Map();
+    for(let i=0;i<arr.length;i++)
+        if(map.has(arr[i])) map.set(arr[i], map.get(arr[i])+1);
+        else map.set(arr[i], 1);
+    
+   
+    let arrEntries = [...map.entries()].filter(x=>x[0]==x[1]);
+    if(arrEntries.length ==0) return -1;
+    let max = Number.MIN_SAFE_INTEGER;
+    for(let i=0;i<arrEntries.length;i++){
+        if (arrEntries[i][0]>max) max = arrEntries[i][0]
+    }
+    return max;
+};
+
+// by memory
+var findLucky = function(arr) {
+    const arrHashMap = arr.reduce((acc, integer) => {
+        acc[integer] ? acc[integer] += 1 : acc[integer] = 1;    
+        return acc;
+    }, {});
+    
+    const keys = Object.keys(arrHashMap);
+    const values = Object.values(arrHashMap);
+
+    return values.reduce((acc, integer, index) => {
+       const currentKey = +keys[index];
+        
+       if(
+           currentKey === integer 
+           && integer > acc
+       ) {
+           acc = integer;
+       }
+        
+       return acc;
+    }, -1);
+};
