@@ -37,3 +37,5 @@
    HappyLynx
    10 апреля 2019 в 17:25 0
    Потому что Array.indexOf работает за O(n), в итоге весь ваш алгоритм работает за O(n^2), вы просто переложили половину работы по перебору влоб на плечи реализации метода indexOf.
+
+10. 380. Insert Delete GetRandom O(1)// https://www.youtube.com/watch?v=WtkwD7ikxfg

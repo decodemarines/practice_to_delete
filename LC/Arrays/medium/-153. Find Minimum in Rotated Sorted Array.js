@@ -35,4 +35,38 @@
 
 //  Если перебирать каждый елемент то O(n) но задача добиться  log n
 
+// https://zxi.mytechroad.com/blog/divide-and-conquer/leetcode-153-find-minimum-in-rotated-sorted-array/
+var findMin = function(nums) {
+    let n = nums.length
+     let i = 0,
+         j = n - 1,
+         mid
+     while (i < j){
+          mid = i + (j - i) / 2
+         if (nums[mid] > nums[j]){
+             i = mid + 1
+         }else{
+             j = mid
+         }
+     }
+     return nums[i]
+ 
+};
+ 
 
+const findMin = function (nums) {
+    let low = 0,
+      high = nums.length - 1
+    // loop invariant: 1. low < high
+    //                 2. mid != high and thus A[mid] != A[high] (no duplicate exists)
+    //                 3. minimum is between [low, high]
+    // The proof that the loop will exit: after each iteration either the 'high' decreases
+    // or the 'low' increases, so the interval [low, high] will always shrink.
+    while (low < high) {
+      const mid = low + ((high - low) >> 1)
+      if (nums[mid] <= nums[high]) high = mid
+      else if (nums[mid] > nums[high]) low = mid + 1
+    }
+  
+    return nums[low]
+  }

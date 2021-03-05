@@ -13,7 +13,7 @@
 // Input: nums1 = [1], m = 1, nums2 = [], n = 0
 // Output: [1]
 
-
+// https://www.youtube.com/watch?v=LXq6wnkkeNA&list=PL5b07qlmA3P6UWAVm6rnJXpWAB3Vnj59B&index=26
 var merge = function(A, m, B, n) {
     while(m>0 && n>0){
         if(A[m-1]>B[n-1]){
