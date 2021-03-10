@@ -60,3 +60,36 @@ const check = function(nums) {
 };
   
 
+// 56
+var check = function(nums) {
+  let count = 0
+  for (let i = 1; i < nums.length; i += 1) {
+      if (nums[i] < nums[i - 1]) count += 1
+      if (count > 1) return false
+  }
+  return count === 0 || (count === 1 && nums[0] >= nums[nums.length - 1])
+};
+
+// 64
+var check = function(nums) {
+  let range = 0; 
+  let notSorted = false;
+  
+  for(let i = 0; i < nums.length - 1; i++){
+      if(nums[i] > nums[i + 1]){
+          if(notSorted){
+              return false;
+          } else {
+              notSorted = true;
+          }           
+       }
+      if(notSorted) range++;
+  }    
+      
+  if(notSorted && nums[0] < nums[nums.length - 1]){
+      return false;
+  }
+ 
+  return true;
+
+};

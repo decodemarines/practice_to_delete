@@ -67,3 +67,34 @@ var findDuplicates = function(nums) {
   }
   return arr
 };
+
+
+// class Solution:
+//     def findDuplicates(self, a: List[int]) -> List[int]:
+//         n=len(a)
+//         ans=[]
+//         z=n+1
+//         for i in range(n):
+//             curr=a[i]%z
+//             tar=a[curr-1]  # array elements are 1-based index given
+//             ori=tar%z
+//             new=tar//z  # new will be zero if not target isn't modified yet
+//             if new and new==curr:
+//                 # i.e., 'curr' was already sent to this index earlier
+//                 ans.append(curr)
+//             a[curr-1]=ori+curr*z
+            
+//         for i in range(n):
+//             a[i]//=z
+            
+//         # print(a)
+//         return ans
+    
+//     """
+//  Concept used:
+//     number modification:
+//     for all a, and b; choose z>a,b
+//         m = a+(b%z)*z
+//         current => m%z
+//         new     => m//z
+//     """
