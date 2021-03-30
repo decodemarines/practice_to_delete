@@ -7,6 +7,4 @@ nums
     acc.set(curr, idx);
     return acc;
   }, new Map())
-        .get('res');
-  
-        
+  .get('res');

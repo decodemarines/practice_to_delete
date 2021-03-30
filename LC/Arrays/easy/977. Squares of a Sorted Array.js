@@ -73,4 +73,39 @@ const sortedSquares = function (A) {
       }
     }
     return result.reverse()
-  }
+}
+  
+var sortedSquares = function(A) {
+    let left = 0;
+    let right = A.length-1;
+    
+    while(left <= right) {
+        
+        if(left == right) {
+            A[left] = Math.pow(A[left], 2);
+        } else {
+            A[left] = Math.pow(A[left], 2);
+            A[right] = Math.pow(A[right], 2);
+        }
+        
+        left++;
+        right--;
+    }
+        
+    return A.sort((a,b) => a-b);
+};
+
+var sortedSquares = function(A) {
+    const res = [];
+    let i = 0;
+    while (A[i] < 0) i++;
+    let j = i - 1;
+    while (j >= 0 || i < A.length) {
+      if (i >= A.length || -A[j] <= A[i]) {
+        res.push(A[j--] ** 2);
+      } else {
+        res.push(A[i++] ** 2);
+      }
+    }
+    return res;
+  };

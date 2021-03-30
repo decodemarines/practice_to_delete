@@ -22,15 +22,7 @@
 
 5. Find Minimum in Rotated Sorted Array: Binary Search solution: YT ThinkFWD
 
-6. simple swap var a= [7,8,9,10], i=2, j=3;[a[i],a[j]] = [a[j],a[i]]
-
-   const swap = (a, b) => {
-   const temp = nums[a]
-   nums[a] = nums[b]
-   nums[b] = temp
-   }
-
-   https://en.wikipedia.org/wiki/XOR_swap_algorithm
+6. -
 
 7. YT. Back To Back SWE: Search A 2D Sorted Matrix - Fundamentals of Search Space Reduction
    https://www.youtube.com/watch?v=FOa55B9Ikfg
@@ -55,10 +47,10 @@
     -609. Find Duplicate File in System
     -703. [-] Kth Largest Element in a Stream
     -706. [x] Design HashMap
-    -705. Design HashSet
-    -641. Design Circular Deque
-    -622. Design Circular Queue
-    -707. Design Linked List
+    -705. [x] Design HashSet
+    -641. [-] Design Circular Deque
+    -622. [-] Design Circular Queue
+    -707. [x] Design Linked List : []
     -146. LRU Cache https://www.youtube.com/watch?v=akFRa58Svug&list=PLEJXowNB4kPxQIN2dCUAnQ_92HIziG4x6&index=80
     -635. Design Log Storage System
     -1166. Design File System
@@ -67,7 +59,7 @@
     -582. Kill process
     -1756. Design Most Recently Used Queue
 
-    -384. Shuffle an Array
+    -384.[-] Shuffle an Array
     -1441. Build an Array With Stack Operations
 
 11. https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/for...of
@@ -101,3 +93,13 @@ for (let n of fibonacci()) {
 }
 
 ```
+
+12. Sorting algs:
+    https://nick.balestrafoster.com/2015/logarithmic-time-sorting-algorithms/
+    https://nick.balestrafoster.com/2015/quadratic-time-sorting-algorithms/
+
+13. https://nick.balestrafoster.com/2015/Functional-and-in-place-matrix-rotation/
+
+14. https://nick.balestrafoster.com/2015/classes-and-instantiation-patterns-in-javascript/
+
+15. https://www.codegrepper.com/code-examples/javascript/frameworks/nodejs

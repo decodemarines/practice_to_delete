@@ -4,4 +4,6 @@
 //O:25
 // Найти сумму всех эл по диагоналям
 
-var diagonalSum = function(mat) {};
+var diagonalSum = function (mat) {
+    
+};
