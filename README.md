@@ -103,3 +103,5 @@ for (let n of fibonacci()) {
 14. https://nick.balestrafoster.com/2015/classes-and-instantiation-patterns-in-javascript/
 
 15. https://www.codegrepper.com/code-examples/javascript/frameworks/nodejs
+
+16. PURPLE
